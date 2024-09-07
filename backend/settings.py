@@ -23,7 +23,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'database',
-
     'gunicorn',
 ]
 
@@ -57,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.app'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
