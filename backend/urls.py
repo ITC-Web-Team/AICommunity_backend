@@ -28,6 +28,7 @@ urlpatterns = [
     path('member/', display_members),
     path('projects/', display_projects),
     path('projects/<int:id>' , display_project),
+    path('gallery/', display_gallery),
     path('admin/', admin.site.urls),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

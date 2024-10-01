@@ -71,3 +71,10 @@ def display_project(request, id):
     except project.DoesNotExist:
         return Response(data={'error': 'Project not found'}, status=status.HTTP_404_NOT_FOUND)   
     
+
+@api_view(['GET'])
+def display_gallery(request):
+    gallery = Gallery.objects.all()
+    data = GallerySerializer(gallery, many=True).data
+    
+    return Response(data=data, status=status.HTTP_200_OK)

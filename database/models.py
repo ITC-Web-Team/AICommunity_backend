@@ -40,10 +40,15 @@ class Project(models.Model):
     title = models.CharField(max_length = 100)
     img =models.ImageField(upload_to= './')
     link = models.URLField(max_length=100)
-    description = models.TextField(default = None)
-    
+    description = models.TextField(default = None)    
     
     def __str__(self):
         return self.title
+    
+class Gallery(models.Model):
+    img =models.ImageField(upload_to= './')
+    
+    def __str__(self):
+        return self.img.url
 
 
